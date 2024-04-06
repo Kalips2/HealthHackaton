@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/GroupHeader.dart';
 
 class GroupDetailPage extends StatelessWidget {
   final String groupName;
@@ -11,6 +12,7 @@ class GroupDetailPage extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
+          const SizedBox(height: 30.0),
           GroupHeader(
             groupName: groupName,
             onFindSupervisorPressed: () {
@@ -21,49 +23,6 @@ class GroupDetailPage extends StatelessWidget {
             },
           ),
           // todo chat
-        ],
-      ),
-    );
-  }
-}
-
-class GroupHeader extends StatelessWidget {
-  final String groupName;
-  final VoidCallback onFindSupervisorPressed;
-  final VoidCallback onCalendarPressed;
-
-  GroupHeader({
-    required this.groupName,
-    required this.onFindSupervisorPressed,
-    required this.onCalendarPressed,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(16.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(
-            groupName,
-            style: const TextStyle(
-              fontSize: 18.0,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          Row(
-            children: [
-              IconButton(
-                icon: const Icon(Icons.search),
-                onPressed: onFindSupervisorPressed,
-              ),
-              IconButton(
-                icon: const Icon(Icons.calendar_today),
-                onPressed: onCalendarPressed,
-              ),
-            ],
-          ),
         ],
       ),
     );
