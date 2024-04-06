@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Calendar extends StatelessWidget {
+class CalendarButton extends StatelessWidget {
   final IconData iconData;
   final Color iconColor;
   final Color backgroundColor;
   final double size;
   final VoidCallback onPressed;
 
-  const Calendar({super.key,
+  const CalendarButton({super.key,
     required this.iconData,
     required this.iconColor,
     required this.backgroundColor,

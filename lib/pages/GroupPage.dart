@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/ChatHistory.dart';
+import '../widgets/ChatInput.dart';
 import '../widgets/GroupHeader.dart';
 
 class GroupDetailPage extends StatelessWidget {
@@ -22,7 +24,8 @@ class GroupDetailPage extends StatelessWidget {
               // todo
             },
           ),
-          // todo chat
+          ChatHistory(),
+          ChatInput(),
         ],
       ),
     );

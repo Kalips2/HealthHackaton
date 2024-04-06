@@ -29,7 +29,7 @@ class GroupHeader extends StatelessWidget {
               groupName,
               overflow: TextOverflow.ellipsis,
               style: const TextStyle(
-                fontSize: 24.0,
+                fontSize: 19.0,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -38,7 +38,7 @@ class GroupHeader extends StatelessWidget {
             // todo handle supervisors
           }),
           const SizedBox(width: 16.0),
-          Calendar(
+          CalendarButton(
             iconData: Icons.calendar_today,
             iconColor: Colors.blue,
             backgroundColor: Colors.yellow,
